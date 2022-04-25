@@ -1,4 +1,4 @@
-FROM devopsedu/webapp
-ADD website /var/www/html
-RUN rm /var/www/html/index.html
-CMD apachectl -D FOREGROUND
+FROM php:7.4-cli
+COPY . /usr/src/app
+CMD [ "php", "/mail/index.php"]
+
