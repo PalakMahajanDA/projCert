@@ -1,6 +1,4 @@
-FROM php:7.4-cli
-COPY ./website/ /usr/src/myapp
-WORKDIR /usr/src/myapp
-CMD [ "php", "./index.php" ]
-
-
+FROM devopsedu/webapp 
+ADD website /var/www/html
+RUN rm /var/www/html/index.html
+CMD apachectl -D FOREGROUND
