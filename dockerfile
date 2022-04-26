@@ -1,5 +1,5 @@
 FROM php:7.4-cli
 run docker-php-source extract
-COPY . /var/www/html
+COPY .website /var/www/html
 
 
