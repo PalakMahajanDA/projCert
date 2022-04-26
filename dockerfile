@@ -1,7 +1,6 @@
 FROM php:7.4-cli
-run docker-php-source extract
-COPY ./website/ /var/www/html
-WORKDIR /var/www/html
+COPY .website/ /usr/src/myapp
+WORKDIR /usr/src/myapp
 CMD [ "php", "./index.php" ]
 
 
